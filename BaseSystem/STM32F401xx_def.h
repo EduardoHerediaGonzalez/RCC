@@ -13,7 +13,8 @@
  *     Device Memory Map
  *     					Base Address	Size	Description
  *     					---------------------------------------------------
- *     					0x00000000		NA		Flash, system memory or SRAM depending of the BOOT pins.
+ *     					0x00000000		NA		Flash, system memory or SRAM
+ *     											depending of the BOOT pins.
  *     					0x08000000		NA		Flash memory.
  *     					0x1FFF0000		NA		System memory.
  *     					0x1FFFC000		NA		Option bytes.

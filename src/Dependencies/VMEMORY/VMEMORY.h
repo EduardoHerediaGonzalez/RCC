@@ -22,8 +22,10 @@
 #include "VMEMORY_def.h"
 
 /*****************************************************************************/
-/* helper macros */
+/* helper macros */\
+extern VMEMORY_tstPeripheralRegisters VMEMORY_stRegister;
 
 /* exported functions */
+
 
 #endif /* VMEMORY_H_ */
