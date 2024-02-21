@@ -162,4 +162,48 @@ void RCC_vAPB2DisPeriphClk(uint8 u8PeriphIndex)
 	RCC_s_pstPeriphReg->APB2ENR &= ~(1<<u8PeriphIndex);
 }
 
+void RCC_vAHB1ResetPeriph(uint8 u8PeriphIndex)
+{
+	ASSERT((u8PeriphIndex >= (uint8)RCC_enAHB1_GPIOA_Peripheral),
+		   (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+	ASSERT((u8PeriphIndex < (uint8)RCC_enTotalAHB1Peripherals),
+		   (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+
+	RCC_s_pstPeriphReg->AHB1RSTR |= (1<<u8PeriphIndex);
+	RCC_s_pstPeriphReg->AHB1RSTR &= ~(1<<u8PeriphIndex);
+}
+
+void RCC_vAHB2ResetPeriph(uint8 u8PeriphIndex)
+{
+	ASSERT((u8PeriphIndex >= (uint8)RCC_enAHB2_OTGFS_Peripheral),
+		   (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+	ASSERT((u8PeriphIndex < (uint8)RCC_enTotalAHB2Peripherals),
+		   (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+
+	RCC_s_pstPeriphReg->AHB2RSTR |= (1<<u8PeriphIndex);
+	RCC_s_pstPeriphReg->AHB2RSTR &= ~(1<<u8PeriphIndex);
+}
+
+void RCC_vAPB1ResetPeriph(uint8 u8PeriphIndex)
+{
+	ASSERT((u8PeriphIndex >= (uint8)RCC_enAPB1_TIM2_Peripheral),
+		   (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+	ASSERT((u8PeriphIndex < (uint8)RCC_enTotalAPB1Peripherals),
+		   (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+
+	RCC_s_pstPeriphReg->APB1RSTR |= (1<<u8PeriphIndex);
+	RCC_s_pstPeriphReg->APB1RSTR &= ~(1<<u8PeriphIndex);
+}
+
+void RCC_vAPB2ResetPeriph(uint8 u8PeriphIndex)
+{
+	ASSERT((u8PeriphIndex >= (uint8)RCC_enAPB2_TIM1_Peripheral),
+		   (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+	ASSERT((u8PeriphIndex < (uint8)RCC_enTotalAPB2Peripherals),
+		   (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+
+	RCC_s_pstPeriphReg->APB2RSTR |= (1<<u8PeriphIndex);
+	RCC_s_pstPeriphReg->APB2RSTR &= ~(1<<u8PeriphIndex);
+}
+
 /* EOF */

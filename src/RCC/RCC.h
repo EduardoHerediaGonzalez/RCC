@@ -139,4 +139,60 @@ extern void RCC_vAPB1DisPeriphClk(uint8 u8PeriphIndex);
  */
 extern void RCC_vAPB2DisPeriphClk(uint8 u8PeriphIndex);
 
+/**
+ * @Fn - RCC_vAHB1ResetPeriph
+ *
+ * @Brief - Interface that reset the peripheral connected to the
+ *          AHB1 bus.
+ *
+ * @Param[in] - u8PeriphIndex = {[RCC_enAHB1_GPIOA_Peripheral,
+ * 								  RCC_enTotalAHB1Peripherals)}.
+ *
+ * @Return - None
+ *
+ */
+extern void RCC_vAHB1ResetPeriph(uint8 u8PeriphIndex);
+
+/**
+ * @Fn - RCC_vAHB2ResetPeriph
+ *
+ * @Brief - Interface that reset the peripheral connected to the
+ *          AHB2 bus.
+ *
+ * @Param[in] - u8PeriphIndex = {[RCC_enAHB2_OTGFS_Peripheral,
+ * 								  RCC_enTotalAHB2Peripherals)}.
+ *
+ * @Return - None
+ *
+ */
+extern void RCC_vAHB2ResetPeriph(uint8 u8PeriphIndex);
+
+/**
+ * @Fn - RCC_vAPB1ResetPeriph
+ *
+ * @Brief - Interface that reset the peripheral connected to the
+ *          APB1 bus.
+ *
+ * @Param[in] - u8PeriphIndex = {[RCC_enAPB1_TIM2_Peripheral,
+ * 								  RCC_enTotalAPB1Peripherals)}.
+ *
+ * @Return - None
+ *
+ */
+extern void RCC_vAPB1ResetPeriph(uint8 u8PeriphIndex);
+
+/**
+ * @Fn - RCC_vAPB2ResetPeriph
+ *
+ * @Brief - Interface that reset the peripheral connected to the
+ *          APB2 bus.
+ *
+ * @Param[in] - u8PeriphIndex = {[RCC_enAPB2_TIM1_Peripheral,
+ * 								  RCC_enTotalAPB2Peripherals)}.
+ *
+ * @Return - None
+ *
+ */
+extern void RCC_vAPB2ResetPeriph(uint8 u8PeriphIndex);
+
 #endif /* RCC_H_ */
