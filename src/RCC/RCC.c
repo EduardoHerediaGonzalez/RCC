@@ -88,6 +88,16 @@ static RCC_s_tstRegisters* RCC_s_pstRegisters = (RCC_s_tstRegisters*)RCC_PERIPHE
 /* private__functions */
 
 /* public_functions */
-
+void RCC_vInit(void)
+{
+	RCC_s_pstRegisters->CR |= RCC_s_nCR_RESET_VALUE;
+	RCC_s_pstRegisters->PLLCFGR = RCC_s_nPLLCRGR_RESET_VALUE;
+	RCC_s_pstRegisters->AHB1LPENR = RCC_s_nAHB1LPENR_RESET_VALUE;
+	RCC_s_pstRegisters->AHB2LPENR = RCC_s_nAHB2LPENR_RESET_VALUE;
+	RCC_s_pstRegisters->APB1LPENR = RCC_s_nAPB1LPENR_RESET_VALUE;
+	RCC_s_pstRegisters->APB2LPENR = RCC_s_nAPB2LPENR_RESET_VALUE;
+	RCC_s_pstRegisters->CSR = RCC_s_nCSR_RESET_VALUE;
+	RCC_s_pstRegisters->PLLI2SCFGR = RCC_s_nPLLI2SCFGR_RESET_VALUE;
+}
 
 /* EOF */

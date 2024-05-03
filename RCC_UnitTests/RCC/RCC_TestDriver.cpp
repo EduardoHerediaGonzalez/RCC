@@ -59,8 +59,11 @@ extern "C"
 
 
 /* public_functions */
-TEST_GROUP(TESTING_TEMPLATE)
+TEST_GROUP(RCC_vInit)
 {
+	uint32 u32ExpectedResult;
+	uint32 u32CurrentResult;
+
     void setup()
     {
     	/* Code intended for Test Group initializing */
@@ -71,9 +74,92 @@ TEST_GROUP(TESTING_TEMPLATE)
     }
 };
 
-TEST(TESTING_TEMPLATE, TestId)
+TEST(RCC_vInit, Test_1)
 {
-	FAIL("Write tests");
+	u32ExpectedResult = (uint32)RCC_s_nCR_RESET_VALUE;
+
+	RCC_vInit();
+
+	u32CurrentResult = (uint32)RCC_s_pstRegisters->CR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
+
+TEST(RCC_vInit, Test_2)
+{
+	u32ExpectedResult = (uint32)RCC_s_nPLLCRGR_RESET_VALUE;
+
+	RCC_vInit();
+
+	u32CurrentResult = (uint32)RCC_s_pstRegisters->PLLCFGR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
+
+TEST(RCC_vInit, Test_3)
+{
+	u32ExpectedResult = (uint32)RCC_s_nAHB1LPENR_RESET_VALUE;
+
+	RCC_vInit();
+
+	u32CurrentResult = (uint32)RCC_s_pstRegisters->AHB1LPENR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
+
+TEST(RCC_vInit, Test_4)
+{
+	u32ExpectedResult = (uint32)RCC_s_nAHB2LPENR_RESET_VALUE;
+
+	RCC_vInit();
+
+	u32CurrentResult = (uint32)RCC_s_pstRegisters->AHB2LPENR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
+
+TEST(RCC_vInit, Test_5)
+{
+	u32ExpectedResult = (uint32)RCC_s_nAPB1LPENR_RESET_VALUE;
+
+	RCC_vInit();
+
+	u32CurrentResult = (uint32)RCC_s_pstRegisters->APB1LPENR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
+
+TEST(RCC_vInit, Test_6)
+{
+	u32ExpectedResult = (uint32)RCC_s_nAPB2LPENR_RESET_VALUE;
+
+	RCC_vInit();
+
+	u32CurrentResult = (uint32)RCC_s_pstRegisters->APB2LPENR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
+
+TEST(RCC_vInit, Test_7)
+{
+	u32ExpectedResult = (uint32)RCC_s_nCSR_RESET_VALUE;
+
+	RCC_vInit();
+
+	u32CurrentResult = (uint32)RCC_s_pstRegisters->CSR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
+
+TEST(RCC_vInit, Test_8)
+{
+	u32ExpectedResult = (uint32)RCC_s_nPLLI2SCFGR_RESET_VALUE;
+
+	RCC_vInit();
+
+	u32CurrentResult = (uint32)RCC_s_pstRegisters->PLLI2SCFGR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
 }
 
 /* EOF */

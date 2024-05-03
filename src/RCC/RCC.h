@@ -26,5 +26,16 @@
 /* exported variables */
 
 /* exported functions */
+/*
+ * @Fn - RCC_vInit
+ *
+ * @Brief - Interface that initialize some registers with a reset value specified
+ * 			in the reference manual of the microcontroller.
+ *
+ * @Param - None
+ *
+ * @return - None
+ */
+extern void RCC_vInit(void);
 
 #endif /* RCC_H_ */
