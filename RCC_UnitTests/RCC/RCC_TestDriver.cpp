@@ -1,16 +1,17 @@
 /**
- * @file    COMPNAME_TestDriver.cpp
+ * @file    RCC_TestDriver.cpp
  *
- * @brief   Código de ensayos para el componente COMPNAME.
+ * @brief   Código de ensayos para el componente RCC.
  *
  * @note
  *        ______________
- *        TBD_E
+ *        Eduardo
+ *        Heredia Gonzalez
  *        Encargado de
  *	      ensayos
  *
  * @version
- * - TBD_E -- DD/MM/YYYY -- Actual
+ * - Eduardo Heredia Gonzalez -- 05/04/2024 -- Actual
  * 	- Versión inicial.
  *
  */
