@@ -1,0 +1,6 @@
+.DS_Store
+.settings/*
+/Release/*
+/SwDevelopment/*
+/UnitTestsLinuxOS/*
+/UnitTestsMacOS/*
