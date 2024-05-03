@@ -1,32 +1,24 @@
 /**
  * Copyright © 2024 
  *
- * @file    VIRTUALMEM.h
+ * @file    VIRTUALMEM_cfg.h
  * @note
  *        ______________      
  *        Eduardo	          
  *        Heredia Gonzalez    
  *        Diseñador           
  *
- * @brief   VIRTUALMEM 
+ * @brief   VIRTUALMEM_cfg 
  * @version No oficial
  *     
  */
 
-#ifndef VIRTUALMEM_H_
-#define VIRTUALMEM_H_
+#ifndef VIRTUALMEM_cfg_H_
+#define VIRTUALMEM_cfg_H_
 
 /* system headers */
 
-/* own headers */
-#include "VIRTUALMEM_def.h"
-
 /*****************************************************************************/
-/* helper macros */
+/* exported configuration macros */
 
-/* exported variables */
-extern VIRTUALMEM_tstRegisters VIRTUALMEM_stRegisters;
-
-/* exported functions */
-
-#endif /* VIRTUALMEM_H_ */
+#endif /* VIRTUALMEM_cfg_H_ */

@@ -29,12 +29,13 @@ extern "C"
 extern "C"
 {
 /* Used headers written in C */
+#include "VIRTUALMEM.c"
 }
 
 /******************** Start of Code Under Test ********************/
 extern "C"
 {
-
+#include "RCC.c"
 }
 /******************** End of Code Under Test ********************/
 
