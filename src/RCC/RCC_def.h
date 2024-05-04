@@ -35,4 +35,9 @@ typedef enum RCC_AHB1Peripherals
 	RCC_enTotalOfAHB1Peripherals
 }RCC_tenAHB1Peripherals;
 
+typedef enum RCC_AHB2Peripherals
+{
+	RCC_enOTGFS_Peripheral = 7,
+	RCC_enTotalOfAHB2Peripherals
+}RCC_tenAHB2Peripherals;
 #endif /* RCC_def_H_ */
