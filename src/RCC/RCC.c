@@ -116,4 +116,11 @@ void RCC_vAHB2PeripheralReset(uint8 u8Peripheral)
 	RCC_s_pstRegisters->AHB2RSTR |= (uint32)(1<<u8Peripheral);
 }
 
+void RCC_vAPB1PeripheralReset(uint8 u8Peripheral)
+{
+	ASSERT((uint8)(u8Peripheral < (uint8)RCC_enTotalOfAPB1Peripherals), (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+
+	RCC_s_pstRegisters->APB1RSTR |= (uint32)(1<<u8Peripheral);
+}
+
 /* EOF */

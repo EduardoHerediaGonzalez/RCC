@@ -40,4 +40,22 @@ typedef enum RCC_AHB2Peripherals
 	RCC_enOTGFS_Peripheral = 7,
 	RCC_enTotalOfAHB2Peripherals
 }RCC_tenAHB2Peripherals;
+
+typedef enum RCC_APB1Peripherals
+{
+	RCC_enTIM2_Peripheral = 0,
+	RCC_enTIM3_Peripheral,
+	RCC_enTIM4_Peripheral,
+	RCC_enTIM5_Peripheral,
+	RCC_enWWDG_Peripheral = 11,
+	RCC_enSPI2_Peripheral = 14,
+	RCC_enSPI3_Peripheral,
+	RCC_enUSART2_Peripheral = 17,
+	RCC_enI2C1_Peripheral = 21,
+	RCC_enI2C2_Peripheral,
+	RCC_enI2C3_Peripheral,
+	RCC_enPWR_Peripheral = 28,
+	RCC_enTotalOfAPB1Peripherals
+}RCC_tenAPB1Peripherals;
+
 #endif /* RCC_def_H_ */
