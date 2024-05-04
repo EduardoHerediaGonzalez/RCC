@@ -75,4 +75,16 @@ extern void RCC_vAHB2PeripheralReset(uint8 u8Peripheral);
  */
 extern void RCC_vAPB1PeripheralReset(uint8 u8Peripheral);
 
+/*
+ * @Fn - RCC_vAPB2PeripheralReset
+ *
+ * @Brief - Interface that reset the peripheral "u8Peripheral" connected to the
+ * 			bus APB2.
+ *
+ * @Param[in] - u8Peripheral = {[RCC_enTIM1_Peripheral, RCC_enTotalOfAPB2Peripherals)}
+ *
+ * @return - None
+ */
+extern void RCC_vAPB2PeripheralReset(uint8 u8Peripheral);
+
 #endif /* RCC_H_ */

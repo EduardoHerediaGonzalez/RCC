@@ -133,6 +133,25 @@ TEST_GROUP(RCC_vAPB1PeripheralReset)
     }
 };
 
+TEST_GROUP(RCC_vAPB2PeripheralReset)
+{
+	uint8 u8Peripheral;
+	sint8 s8ExpectedResult;
+	sint8 s8CurrentResult;
+	uint32 u32ExpectedResult;
+	uint32 u32CurrentResult;
+
+    void setup()
+    {
+    	/* Code intended for Test Group initializing */
+    }
+    void teardown()
+    {
+    	/* Code intended for Test Group destruction */
+    	ASSERT_vResetStaticVar();
+    }
+};
+
 TEST(RCC_vInit, Test_1)
 {
 	u32ExpectedResult = (uint32)RCC_s_nCR_RESET_VALUE;
@@ -293,5 +312,28 @@ TEST(RCC_vAPB1PeripheralReset, Test_2)
 	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
 }
 
+TEST(RCC_vAPB2PeripheralReset, Test_1)
+{
+	u8Peripheral = (uint8)RCC_enTotalOfAPB1Peripherals;
+	s8ExpectedResult = (sint8)ASSERT_nVALUE_OUT_OF_RANGE;
+
+	RCC_vAPB2PeripheralReset(u8Peripheral);
+
+	s8CurrentResult = (sint8)ASSERT_s_s8Error;
+
+	SIGNED_BYTES_EQUAL(s8ExpectedResult, s8CurrentResult);
+}
+
+TEST(RCC_vAPB2PeripheralReset, Test_2)
+{
+	u8Peripheral = (uint8)RCC_enADC1_Peripheral;
+	u32ExpectedResult = (uint32)(1<<(uint32)RCC_enADC1_Peripheral);
+
+	RCC_vAPB2PeripheralReset(u8Peripheral);
+
+	u32CurrentResult = (uint32)(RCC_s_pstRegisters->APB2RSTR & (1<<(uint32)RCC_enADC1_Peripheral));
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
 
 /* EOF */
