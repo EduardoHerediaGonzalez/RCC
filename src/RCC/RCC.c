@@ -18,6 +18,8 @@
 #include "PLATFORM_TYPES_def.h"
 
 /* used headers */
+#include "ASSERT_def.h"
+#include "ASSERT.h"
 #if defined _UNITTESTS_ || defined _SWDEVELOPMENT_
 #include "VIRTUALMEM.h"
 #endif
@@ -98,6 +100,13 @@ void RCC_vInit(void)
 	RCC_s_pstRegisters->APB2LPENR = RCC_s_nAPB2LPENR_RESET_VALUE;
 	RCC_s_pstRegisters->CSR = RCC_s_nCSR_RESET_VALUE;
 	RCC_s_pstRegisters->PLLI2SCFGR = RCC_s_nPLLI2SCFGR_RESET_VALUE;
+}
+
+void RCC_vAHB1PeripheralReset(uint8 u8Peripheral)
+{
+	ASSERT((uint8)(u8Peripheral < (uint8)RCC_enTotalOfAHB1Peripherals), (sint8)ASSERT_nVALUE_OUT_OF_RANGE);
+
+	RCC_s_pstRegisters->AHB1RSTR |= (uint32)(1<<u8Peripheral);
 }
 
 /* EOF */

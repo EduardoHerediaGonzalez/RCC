@@ -58,6 +58,7 @@
 									<listOptionValue builtIn="false" value="&quot;${CppUTestMacOSPath}/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/BaseSystem&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/RCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Mocks/ASSERT&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Mocks/VIRTUALMEM&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.preprocessor.def.588135120" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -73,6 +74,7 @@
 									<listOptionValue builtIn="false" value="&quot;${CppUTestMacOSPath}/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/BaseSystem&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/RCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Mocks/ASSERT&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Mocks/VIRTUALMEM&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.preprocessor.def.symbols.1128453978" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -86,7 +88,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/Mocks|src/Dependencies|src/main.c|src/RCC|Mocks" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="BaseSystem/ASSERT|src/Mocks|src/Dependencies|src/main.c|src/RCC|Mocks" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -137,6 +139,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.base.405816421" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.base">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.680427907" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/BaseSystem&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/Dependencies/ASSERT&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/Dependencies/VIRTUALMEM&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/RCC&quot;"/>
 								</option>
@@ -151,6 +154,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.macosx.base.215601977" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.macosx.base">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.217437897" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/BaseSystem&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/Dependencies/ASSERT&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/Dependencies/VIRTUALMEM&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/RCC&quot;"/>
 								</option>
@@ -211,6 +215,7 @@
 									<listOptionValue builtIn="false" value="&quot;${CppUTestLinuxOSPath}/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/BaseSystem&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/RCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Mocks/ASSERT&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Mocks/VIRTUALMEM&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.preprocessor.def.415137686" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -225,6 +230,7 @@
 									<listOptionValue builtIn="false" value="&quot;${CppUTestLinuxOSPath}/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/BaseSystem&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/RCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Mocks/ASSERT&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/Mocks/VIRTUALMEM&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.preprocessor.def.symbols.90680245" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
@@ -254,7 +260,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="src/Mocks|src/Dependencies|src/main.c|src/RCC|Mocks" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="BaseSystem/ASSERT|src/Mocks|src/Dependencies|src/main.c|src/RCC|Mocks" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -305,7 +311,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.base.118267063" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.macosx.base">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1128777588" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/BaseSystem&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/Dependencies&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/Dependencies/ASSERT&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/RCC&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="gnu.cpp.compiler.option.preprocessor.def.51215933" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols"/>
@@ -317,7 +323,7 @@
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.macosx.base.988707814" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.macosx.base">
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.1010583693" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/BaseSystem&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/Dependencies&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/Dependencies/ASSERT&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/src/RCC&quot;"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="true" id="gnu.c.compiler.option.preprocessor.def.symbols.590744164" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols"/>

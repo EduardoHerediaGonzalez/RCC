@@ -19,6 +19,7 @@
 
 /* system headers */
 #include "CppUTest/TestHarness.h"
+#include "ASSERT_def.h"
 extern "C"
 {
 /* System headers written in C */
@@ -29,6 +30,7 @@ extern "C"
 extern "C"
 {
 /* Used headers written in C */
+#include "ASSERT.c"
 #include "VIRTUALMEM.c"
 }
 
@@ -71,6 +73,25 @@ TEST_GROUP(RCC_vInit)
     void teardown()
     {
     	/* Code intended for Test Group destruction */
+    }
+};
+
+TEST_GROUP(RCC_vAHB1PeripheralReset)
+{
+	uint8 u8Peripheral;
+	sint8 s8ExpectedResult;
+	sint8 s8CurrentResult;
+	uint32 u32ExpectedResult;
+	uint32 u32CurrentResult;
+
+    void setup()
+    {
+    	/* Code intended for Test Group initializing */
+    }
+    void teardown()
+    {
+    	/* Code intended for Test Group destruction */
+    	ASSERT_vResetStaticVar();
     }
 };
 
@@ -158,6 +179,30 @@ TEST(RCC_vInit, Test_8)
 	RCC_vInit();
 
 	u32CurrentResult = (uint32)RCC_s_pstRegisters->PLLI2SCFGR;
+
+	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
+}
+
+TEST(RCC_vAHB1PeripheralReset, Test_9)
+{
+	u8Peripheral = (uint8)RCC_enTotalOfAHB1Peripherals;
+	s8ExpectedResult = (sint8)ASSERT_nVALUE_OUT_OF_RANGE;
+
+	RCC_vAHB1PeripheralReset(u8Peripheral);
+
+	s8CurrentResult = (sint8)ASSERT_s_s8Error;
+
+	SIGNED_BYTES_EQUAL(s8ExpectedResult, s8CurrentResult);
+}
+
+TEST(RCC_vAHB1PeripheralReset, Test_10)
+{
+	u8Peripheral = (uint8)RCC_enGPIOH_Peripheral;
+	u32ExpectedResult = (uint32)(1<<(uint32)RCC_enGPIOH_Peripheral);
+
+	RCC_vAHB1PeripheralReset(u8Peripheral);
+
+	u32CurrentResult = (uint32)(RCC_s_pstRegisters->AHB1RSTR & (1<<(uint32)RCC_enGPIOH_Peripheral));
 
 	UNSIGNED_LONGS_EQUAL(u32ExpectedResult, u32CurrentResult);
 }
